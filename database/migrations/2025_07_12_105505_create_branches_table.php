@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('branches', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('sub_department_id')->constrained('sub_departments')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreignId('main_department_id')->constrained('main_departments')->onDelete('restrict')->onUpdate('cascade');
             $table->timestamps();
             $table->softDeletes();
         });

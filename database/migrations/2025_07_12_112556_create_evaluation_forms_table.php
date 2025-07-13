@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('evaluation_forms', function (Blueprint $table) {
             $table->id();
+            $table->string('form_name');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

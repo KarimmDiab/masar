@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('evaluation_questions', function (Blueprint $table) {
             $table->id();
+            $table->string('question_text');
+            $table->foreignId('evaluation_form_id')->constrained('evaluation_forms')->onDelete('cascade')->onUpdate('cascade');
+            $table->integer('max_score');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

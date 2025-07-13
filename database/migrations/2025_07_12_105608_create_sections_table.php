@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('sections', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('branch_id')->constrained('branches')->onDelete('restrict')->onUpdate('cascade')->nullable();
             $table->string('name');
             $table->morphs('sectionable');
             $table->timestamps();

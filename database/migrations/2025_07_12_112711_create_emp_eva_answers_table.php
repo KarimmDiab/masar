@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('emp_eva_answers', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('evaluation_form_id')->constrained('evaluation_forms')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreignId('emp_id')->constrained('emps')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreignId('user_id')->constrained('users')->onDelete('restrict')->onUpdate('cascade');
+            $table->integer('final_score');
+            $table->date('evaluation_date');
+            $table->string('grade');
+            $table->text('comments')->nullable();
             $table->timestamps();
         });
     }
