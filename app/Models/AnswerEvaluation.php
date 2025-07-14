@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class BranchEvaAnswer extends Model
+class AnswerEvaluation extends Model
 {
-    /** @use HasFactory<\Database\Factories\BranchEvaAnswerFactory> */
+    /** @use HasFactory<\Database\Factories\AnswerEvaluationFactory> */
     use HasFactory;
 }

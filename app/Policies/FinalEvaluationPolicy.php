@@ -2,11 +2,11 @@
 
 namespace App\Policies;
 
-use App\Models\EmpEvaAnswer;
+use App\Models\FinalEvaluation;
 use App\Models\User;
 use Illuminate\Auth\Access\Response;
 
-class EmpEvaAnswerPolicy
+class FinalEvaluationPolicy
 {
     /**
      * Determine whether the user can view any models.
@@ -19,7 +19,7 @@ class EmpEvaAnswerPolicy
     /**
      * Determine whether the user can view the model.
      */
-    public function view(User $user, EmpEvaAnswer $empEvaAnswer): bool
+    public function view(User $user, FinalEvaluation $finalEvaluation): bool
     {
         return false;
     }
@@ -35,7 +35,7 @@ class EmpEvaAnswerPolicy
     /**
      * Determine whether the user can update the model.
      */
-    public function update(User $user, EmpEvaAnswer $empEvaAnswer): bool
+    public function update(User $user, FinalEvaluation $finalEvaluation): bool
     {
         return false;
     }
@@ -43,7 +43,7 @@ class EmpEvaAnswerPolicy
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, EmpEvaAnswer $empEvaAnswer): bool
+    public function delete(User $user, FinalEvaluation $finalEvaluation): bool
     {
         return false;
     }
@@ -51,7 +51,7 @@ class EmpEvaAnswerPolicy
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(User $user, EmpEvaAnswer $empEvaAnswer): bool
+    public function restore(User $user, FinalEvaluation $finalEvaluation): bool
     {
         return false;
     }
@@ -59,7 +59,7 @@ class EmpEvaAnswerPolicy
     /**
      * Determine whether the user can permanently delete the model.
      */
-    public function forceDelete(User $user, EmpEvaAnswer $empEvaAnswer): bool
+    public function forceDelete(User $user, FinalEvaluation $finalEvaluation): bool
     {
         return false;
     }

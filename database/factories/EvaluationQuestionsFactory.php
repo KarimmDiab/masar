@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\EvaluationForm;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,9 @@ class EvaluationQuestionsFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'question_text' => $this->faker->sentence(6),
+            'evaluation_form_id' => EvaluationForm::inRandomOrder()->first()->id,
+            'max_score' => $this->faker->numberBetween(5,10)
         ];
     }
 }

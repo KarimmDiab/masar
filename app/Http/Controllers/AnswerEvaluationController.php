@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\EmpEvaAnswer;
-use App\Http\Requests\StoreEmpEvaAnswerRequest;
-use App\Http\Requests\UpdateEmpEvaAnswerRequest;
+use App\Models\AnswerEvaluation;
+use App\Http\Requests\StoreAnswerEvaluationRequest;
+use App\Http\Requests\UpdateAnswerEvaluationRequest;
 
-class EmpEvaAnswerController extends Controller
+class AnswerEvaluationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +27,7 @@ class EmpEvaAnswerController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreEmpEvaAnswerRequest $request)
+    public function store(StoreAnswerEvaluationRequest $request)
     {
         //
     }
@@ -35,7 +35,7 @@ class EmpEvaAnswerController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(EmpEvaAnswer $empEvaAnswer)
+    public function show(AnswerEvaluation $answerEvaluation)
     {
         //
     }
@@ -43,7 +43,7 @@ class EmpEvaAnswerController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(EmpEvaAnswer $empEvaAnswer)
+    public function edit(AnswerEvaluation $answerEvaluation)
     {
         //
     }
@@ -51,7 +51,7 @@ class EmpEvaAnswerController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateEmpEvaAnswerRequest $request, EmpEvaAnswer $empEvaAnswer)
+    public function update(UpdateAnswerEvaluationRequest $request, AnswerEvaluation $answerEvaluation)
     {
         //
     }
@@ -59,7 +59,7 @@ class EmpEvaAnswerController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(EmpEvaAnswer $empEvaAnswer)
+    public function destroy(AnswerEvaluation $answerEvaluation)
     {
         //
     }

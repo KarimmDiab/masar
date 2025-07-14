@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Emp;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,10 @@ class EmpCertificateFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => $this->faker->word(),
+            'emp_id' => Emp::inRandomOrder()->first()->id,
+            'provided_by' => $this->faker->company(),
+            'issued_date' => $this->faker->date()
         ];
     }
 }

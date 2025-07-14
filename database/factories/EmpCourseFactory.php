@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Emp;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,10 @@ class EmpCourseFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => $this->faker->word(),
+            'emp_id' => Emp::inRandomOrder()->first()->id,
+            'prvided_by' => $this->faker->company(),
+            'course_date' => $this->faker->date()
         ];
     }
 }

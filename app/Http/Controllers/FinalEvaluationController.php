@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\BranchEvaAnswer;
-use App\Http\Requests\StoreBranchEvaAnswerRequest;
-use App\Http\Requests\UpdateBranchEvaAnswerRequest;
+use App\Models\FinalEvaluation;
+use App\Http\Requests\StoreFinalEvaluationRequest;
+use App\Http\Requests\UpdateFinalEvaluationRequest;
 
-class BranchEvaAnswerController extends Controller
+class FinalEvaluationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +27,7 @@ class BranchEvaAnswerController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreBranchEvaAnswerRequest $request)
+    public function store(StoreFinalEvaluationRequest $request)
     {
         //
     }
@@ -35,7 +35,7 @@ class BranchEvaAnswerController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(BranchEvaAnswer $branchEvaAnswer)
+    public function show(FinalEvaluation $finalEvaluation)
     {
         //
     }
@@ -43,7 +43,7 @@ class BranchEvaAnswerController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(BranchEvaAnswer $branchEvaAnswer)
+    public function edit(FinalEvaluation $finalEvaluation)
     {
         //
     }
@@ -51,7 +51,7 @@ class BranchEvaAnswerController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateBranchEvaAnswerRequest $request, BranchEvaAnswer $branchEvaAnswer)
+    public function update(UpdateFinalEvaluationRequest $request, FinalEvaluation $finalEvaluation)
     {
         //
     }
@@ -59,7 +59,7 @@ class BranchEvaAnswerController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(BranchEvaAnswer $branchEvaAnswer)
+    public function destroy(FinalEvaluation $finalEvaluation)
     {
         //
     }

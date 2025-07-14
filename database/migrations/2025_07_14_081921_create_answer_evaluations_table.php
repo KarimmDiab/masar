@@ -11,16 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('emp_eva_answers', function (Blueprint $table) {
+        Schema::create('answer_evaluations', function (Blueprint $table) {
             $table->id();
+            $table->morphs('answer_evaluationable');
             $table->foreignId('evaluation_form_id')->constrained('evaluation_forms')->onDelete('restrict')->onUpdate('cascade');
-            $table->foreignId('emp_id')->constrained('emps')->onDelete('restrict')->onUpdate('cascade');
-            $table->foreignId('user_id')->constrained('users')->onDelete('restrict')->onUpdate('cascade');
-            $table->integer('final_score');
-            $table->date('evaluation_date');
-            $table->string('grade');
-            $table->text('comments')->nullable();
+            $table->foreignId('evaluation_question_id')->constrained('evaluation_questions')->onDelete('restrict')->onUpdate('cascade');
+            $table->integer('score');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('emp_eva_answers');
+        Schema::dropIfExists('answer_evaluations');
     }
 };
