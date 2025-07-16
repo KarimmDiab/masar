@@ -18,13 +18,16 @@ class Section extends Model
         'sectionable_id'
     ];
 
-    public function branch()
-    {
-        return $this->belongsTo(Branch::class);
-    }
+
 
     public function sectionable()
     {
         return $this->morphTo();
     }
+
+    public function emp()
+    {
+        return $this->hasMany(Emp::class);
+    }
+
 }

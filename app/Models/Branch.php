@@ -16,9 +16,16 @@ class Branch extends Model
         'main_department_id,'
     ];
 
-    public function mainDepartment()
+
+
+    public function branchable()
     {
-        return $this->belongsTo(MainDepartment::class);
+        return $this->morphTo();
+    }
+
+    public function sectionable()
+    {
+        return $this->morphMany(Section::class, 'sectionable');
     }
 
     public function emp()
@@ -26,13 +33,9 @@ class Branch extends Model
         return $this->hasMany(Emp::class);
     }
 
-    public function section()
-    {
-        return $this->hasMany(Section::class);
-    }
+    //public function user()
+    //{
+    //    return $this->hasMany(User::class);
+    //}
 
-    public function subDepartment()
-    {
-        return $this->belongsTo(SubDepartment::class);
-    }
 }

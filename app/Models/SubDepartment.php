@@ -21,14 +21,21 @@ class SubDepartment extends Model
         return $this->belongsTo(MainDepartment::class);
     }
 
-    public function section()
-    {
-        return $this->hasMany(Section::class);
-        
-    }
 
     public function emp()
     {
         return $this->hasMany(Emp::class);
+    }
+
+
+    public function branchable()
+    {
+        return $this->morphMany(Branch::class, 'branchable');
+    }
+
+
+    public function sectionable()
+    {
+        return $this->morphMany(Section::class, 'sectionable');
     }
 }

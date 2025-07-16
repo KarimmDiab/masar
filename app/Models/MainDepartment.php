@@ -16,11 +16,18 @@ class MainDepartment extends Model
         'sector_id'
     ];
 
-    public function sector()
+    public function branchable()
     {
-        return $this->belongsTo(Sector::class);
+        return $this->morphMany(Branch::class, 'branchable');
     }
 
+
+    public function sectionable()
+    {
+        return $this->morphMany(Section::class, 'sectionable');
+    }
+
+    
     public function subDepartment()
     {
         return $this->hasMany(SubDepartment::class);
