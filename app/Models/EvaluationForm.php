@@ -14,12 +14,16 @@ class EvaluationForm extends Model
     protected $fillable = [
         'form_name'
     ];
-    
-    
-    public function evaluationQuestions()
+
+
+    public function questions()
     {
-        return $this->hasMany(EvaluationForm::class);
+        return $this->hasMany(EvaluationQuestions::class);
     }
-        
-    
+
+    public function finalEvaluations()
+    {
+        return $this->hasMany(FinalEvaluation::class);
+    }
+
 }

@@ -16,5 +16,23 @@ class AnswerEvaluation extends Model
         'evaluation_form_id',
         'evaluation_question_id',
         'score',
+        'evaluation_date',
+
     ];
+
+
+    public function form()
+    {
+        return $this->belongsTo(EvaluationForm::class);
+    }
+
+    public function question()
+    {
+        return $this->belongsTo(EvaluationQuestions::class);
+    }
+
+    public function evaluated()
+    {
+        return $this->morphTo();
+    }
 }

@@ -17,14 +17,15 @@ class EvaluationQuestions extends Model
         'max_score'
     ];
 
-    public function evaluationForm()
-
+    public function form()
     {
         return $this->belongsTo(EvaluationForm::class);
     }
 
-    public function evaluationAnswers()
+    public function answer()
     {
         return $this->hasMany(AnswerEvaluation::class);
     }
+
+
 }
