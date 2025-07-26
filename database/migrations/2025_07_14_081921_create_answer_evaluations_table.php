@@ -16,9 +16,7 @@ return new class extends Migration {
             $table->foreignId('evaluation_question_id')->constrained('evaluation_questions')->onDelete('restrict')->onUpdate('cascade');
             $table->integer('score');
             $table->date('evaluation_date');
-            
-            $table->morphs('answer_evaluationable');
-
+            $table->morphs('answer_evaluationable', 'an_ev_morph_index'); // ✅ الاسم المختصر
             $table->timestamps();
             $table->softDeletes();
         });

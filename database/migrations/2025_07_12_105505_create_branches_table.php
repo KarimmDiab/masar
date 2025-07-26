@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('branches', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $$table->morphs('branchable');
+            $table->morphs('branchable'); // belongs to main department or sub department 
             $table->timestamps();
             $table->softDeletes();
         });
