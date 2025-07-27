@@ -16,7 +16,7 @@
                     clip-rule="evenodd" />
             </svg>
             <span class="sr-only">{{ $value }}</span>
-            <div>تمت العملية بنجاح!</div>
+            <div>{{ $value }}</div>
         </div>
     @endsession
 

@@ -17,8 +17,12 @@
             <flux:navlist.group :heading="__('Platform')" class="grid">
                 <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')"
                     wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
-                <flux:navlist.item icon="users" :href="route('users.index')" :current="request()->routeIs('users.index')"
-                    wire:navigate>{{ __('users') }}</flux:navlist.item>
+                <flux:navlist.item icon="users" :href="route('users.index')"
+                    :current="request()->routeIs('users.index')" wire:navigate>{{ __('users') }}</flux:navlist.item>
+                <flux:navlist.item icon="layout-grid" :href="route('sectors.index')"
+                    :current="request()->routeIs('sectors.index')" wire:navigate>{{ __('sectors') }}</flux:navlist.item>
+
+                    
 
             </flux:navlist.group>
         </flux:navlist>
@@ -111,7 +115,8 @@
                 <flux:menu.separator />
 
                 <flux:menu.radio.group>
-                    <flux:menu.item :href="route('settings.profile')" icon="cog" wire:navigate>{{ __('Settings') }}
+                    <flux:menu.item :href="route('settings.profile')" icon="cog" wire:navigate>
+                        {{ __('Settings') }}
                     </flux:menu.item>
                 </flux:menu.radio.group>
 
