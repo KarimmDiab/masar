@@ -1,7 +1,7 @@
 <div>
     <div class="relative mb-6 w-full">
-        <flux:heading size="xl" level="1">{{ __('Create Users') }}</flux:heading>
-        <flux:subheading size="lg" class="mb-6">{{ __('Form For Create New User') }}
+        <flux:heading size="xl" level="1">{{ __('Edit Users') }}</flux:heading>
+        <flux:subheading size="lg" class="mb-6">{{ __('Form For edit User') }}
         </flux:subheading>
         <flux:separator variant="subtle" />
     </div>
@@ -15,7 +15,7 @@
             Back</a>
 
         <div class="w-150 mx-auto mt-10">
-            <form wire:submit="addUser" action="" enctype="multipart/form-data" class="mt-6 space-y-6">
+            <form wire:submit="editUser" action="" enctype="multipart/form-data" class="mt-6 space-y-6">
 
                 <flux:input type="text" wire:model="name" label="Name" />
                 <flux:input type="email" wire:model="email" label="Email" />
@@ -36,7 +36,6 @@
                     <option value="manager">مدير</option>
                 </flux:select>
 
-                <flux:input type="file" wire:model="Picture" label="Picture" />
                 <flux:button type="submit" variant="primary">Save</flux:button>
 
             </form>
