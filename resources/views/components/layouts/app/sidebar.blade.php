@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="dark">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="dark" lang="ar" dir="RTL">
 
 <head>
     @include('partials.head')
@@ -18,11 +18,13 @@
                 <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')"
                     wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
                 <flux:navlist.item icon="users" :href="route('users.index')"
-                    :current="request()->routeIs('users.index')" wire:navigate>{{ __('users') }}</flux:navlist.item>
+                    :current="request()->routeIs('users.index')" wire:navigate>{{ __('User') }}</flux:navlist.item>
+                <flux:navlist.item icon="link-slash" :href="route('roles.index')"
+                    :current="request()->routeIs('roles.index')" wire:navigate>{{ __('Roles') }}</flux:navlist.item>
                 <flux:navlist.item icon="layout-grid" :href="route('sectors.index')"
-                    :current="request()->routeIs('sectors.index')" wire:navigate>{{ __('sectors') }}</flux:navlist.item>
+                    :current="request()->routeIs('sectors.index')" wire:navigate>{{ __('Sectors') }}</flux:navlist.item>
 
-                    
+
 
             </flux:navlist.group>
         </flux:navlist>
@@ -68,7 +70,8 @@
                 <flux:menu.separator />
 
                 <flux:menu.radio.group>
-                    <flux:menu.item :href="route('settings.profile')" icon="cog" wire:navigate>{{ __('Settings') }}
+                    <flux:menu.item :href="route('settings.profile')" icon="cog" wire:navigate>
+                        {{ __('Settings') }}
                     </flux:menu.item>
                 </flux:menu.radio.group>
 

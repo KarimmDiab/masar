@@ -1,5 +1,9 @@
 <?php
 
+use App\Livewire\Roles\RoleCreate;
+use App\Livewire\Roles\RoleEdit;
+use App\Livewire\Roles\RoleIndex;
+use App\Livewire\Roles\RoleShow;
 use App\Livewire\Sectors\SectorCreate;
 use App\Livewire\Sectors\SectorEdit;
 use App\Livewire\Sectors\SectorIndex;
@@ -12,6 +16,7 @@ use App\Livewire\Users\UserShow;
 use App\Models\Sector;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
+use Spatie\Permission\Events\RoleDetached;
 
 Route::get('/', function () {
     return view('welcome');
@@ -42,6 +47,14 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/create', SectorCreate::class)->name('create');
         Route::get('/{id}/edit', SectorEdit::class)->name('edit');
         Route::get('/{id}', SectorShow::class)->name('show');
+    });
+
+    //Roles Routes
+    Route::prefix('roles')->name('roles.')->group(function () {
+        Route::get('/', RoleIndex::class)->name('index');
+        Route::get('/create', RoleCreate::class)->name('create');
+        Route::get('/{id}/edit', RoleEdit::class)->name('edit');
+        Route::get('/{id}', RoleShow::class)->name('show');
     });
 
 

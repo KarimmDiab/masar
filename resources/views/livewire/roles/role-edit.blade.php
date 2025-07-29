@@ -15,7 +15,7 @@
             Back</a>
 
         <div class="w-150  mt-10">
-            <form wire:submit="addRole" action="" enctype="multipart/form-data" class="mt-6 space-y-6">
+            <form wire:submit="editRole" action="" enctype="multipart/form-data" class="mt-6 space-y-6">
 
                 <flux:input type="text" wire:model="name" label="Name" />
                 <flux:checkbox.group wire:model="permissions" label="permissions">

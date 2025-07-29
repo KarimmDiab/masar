@@ -1,7 +1,7 @@
 <div>
     <div class="relative mb-6 w-full">
-        <flux:heading size="xl" level="1">{{ __('Edit Roles') }}</flux:heading>
-        <flux:subheading size="lg" class="mb-6">{{ __('Form For Edit Role') }}
+        <flux:heading size="xl" level="1">{{ __('Create Roles') }}</flux:heading>
+        <flux:subheading size="lg" class="mb-6">{{ __('Form For Create New Role') }}
         </flux:subheading>
         <flux:separator variant="subtle" />
     </div>
@@ -20,7 +20,7 @@
                 <flux:input type="text" wire:model="name" label="Name" />
                 <flux:checkbox.group wire:model="permissions" label="permissions">
                     @foreach ($allPermissions as $permission)
-                        <flux:checkbox label="{{ $permission->name }}" value="{{ $permission->name }}" checked />
+                        <flux:checkbox label="{{ $permission->name }}" value="{{ $permission->name }}"  />
                     @endforeach
                     
                 </flux:checkbox.group>

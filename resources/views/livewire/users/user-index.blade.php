@@ -92,7 +92,7 @@
                             <flux:button href="{{ route('users.edit', $user->id) }} " variant="primary" color="blue">Edit User
                             </flux:button>
 
-                            <flux:button wire:click="delete({{ $user->id }})" variant="danger">Delete User
+                            <flux:button wire:click="delete({{ $user->id }})" wire:confirm="هل انت متأكد من حذف اسم المستخدم ؟" variant="danger">Delete User
                             </flux:button>
 
                         </td>
