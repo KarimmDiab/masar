@@ -75,7 +75,7 @@
                         <td class="px-6 py-4">
                             @if ($role->permissions && $role->permissions->count())
                                 @foreach ($role->permissions as $permission)
-                                    <flux:badge>{{ $permission->name }}</flux:badge>
+                                    <flux:badge color="lime">{{ $permission->name }}</flux:badge>
                                 @endforeach
                             @else
                                 <flux:badge>لا يوجد اذونات</flux:badge>

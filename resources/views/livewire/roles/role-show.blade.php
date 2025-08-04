@@ -19,16 +19,12 @@
             <P class="mb-5"><STRONG>permissions : </STRONG>
                 @if ($role->permissions && $role->permissions->count())
                     @foreach ($role->permissions as $permission)
-                        <flux:badge class="m-2">{{ $permission->name }}</flux:badge>
+                        <flux:badge class="m-2" color="lime">{{ $permission->name }}</flux:badge>
                     @endforeach
                 @else
                     <flux:badge>لا يوجد اذونات</flux:badge>
                 @endif
             </P>
-
-
-
-
         </div>
     </div>
 </div>
